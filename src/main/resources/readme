@@ -1,0 +1,53 @@
+Tomcat started on port 8080
+
+Then open:
+
+http://localhost:8080
+
+Your browser should display the Todo application.
+
+7. Verify the API
+
+You can also test:
+
+GET http://localhost:8080/api/todos
+
+Initially:
+
+[]
+
+Then:
+
+POST http://localhost:8080/api/todos
+
+with:
+
+{
+  "title": "Learn Java",
+  "description": "Practice Java problem solving",
+  "completed": false
+}
+
+Response:
+
+{
+  "id": 1,
+  "title": "Learn Java",
+  "description": "Practice Java problem solving",
+  "completed": false
+}
+
+Then:
+
+GET http://localhost:8080/api/todos
+
+returns:
+
+[
+  {
+    "id": 1,
+    "title": "Learn Java",
+    "description": "Practice Java problem solving",
+    "completed": false
+  }
+]
